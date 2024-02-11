@@ -39,12 +39,12 @@ document.addEventListener("DOMContentLoaded", () => {
     likeIcons.forEach((likeIcon, index) => {
         likeIcon.addEventListener("click", () => {
             let thread = homePages[index].cloneNode(true);
-            console.log("thread:", thread);
+            // console.log("thread:", thread);
 
             const newDiv = document.createElement('div');
             newDiv.appendChild(thread);
 
-            console.log("newDiv:", newDiv);
+            // console.log("newDiv:", newDiv);
 
             likeAppendContainer.appendChild(newDiv);
             newDiv.style.visibility = "visible";
@@ -56,24 +56,29 @@ document.addEventListener("DOMContentLoaded", () => {
 //Add an event listener for hamburger
 document.querySelector(".hamburger").addEventListener("click",()=>{
     document.querySelector(".left").style.left="0"
-    // homeSvg.style.display="none"
-  })
+    likeSvg.style.filter="invert(0)"
+    homeSvg.style.filter="invert(1)"
+})
 
   
 //Add event listener to close hamburger
 document.querySelector(".close").addEventListener("click",()=>{
     document.querySelector(".left").style.left="-120%"
+    homeSvg.style.filter="invert(0)"
+
   })
   
 // Add event listener to show trending
 document.querySelector(".right-icon").addEventListener("click",()=>{
     document.querySelector(".right").style.display="block"
     document.querySelector(".right").style.position="absolute"
-    document.querySelector(".right").style.right="0"
+    document.querySelector(".right").style.left="40%"
 })
+
+
 
 // Add event listener to close trending
 document.querySelector(".right-info .close").addEventListener("click",()=>{
-    document.querySelector(".right").style.left="31rem"
+    document.querySelector(".right").style.left="100%"
 })
 

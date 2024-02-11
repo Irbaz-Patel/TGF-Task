@@ -391,7 +391,8 @@
         }
         .right{
             display: none;
-        }
+}
+        
         .right img{
             display: none;
         }
