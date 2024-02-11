@@ -432,6 +432,14 @@
         }
     }
 
+    @media (max-width: 352px){
+        .thread{
+            padding: 10px 0;
+        }
+    }
+
+
+
 
 
 
